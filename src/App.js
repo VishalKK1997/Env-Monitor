@@ -5,6 +5,7 @@ import Image from "./components/Image/Image";
 import "./App.css";
 import { Grid, makeStyles, Typography } from "@material-ui/core";
 import MapGrid from "./components/MapGrid/MapGrid";
+import RouteRecommend from "./components/RouteRecommend/RouteRecommend";
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -41,6 +42,16 @@ const App = () => {
             <div>
               <BarChart />
             </div>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography
+              variant="h4"
+              style={{ textAlign: "center" }}
+              className={classes.heading}
+            >
+              Route Recommender
+            </Typography>
+            <RouteRecommend />
           </Grid>
         </Grid>
       </main>

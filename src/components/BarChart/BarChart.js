@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
 const BarChart = () => {
   const [days, setDays] = useState("0");
   const [date, setDate] = useState(formatDate(new Date()));
-  const [barData, setBarData] = useState(data);
+  const [barData] = useState(data);
   const classes = useStyles();
 
   const handleSubmit = () => {};

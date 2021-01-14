@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import BarChart from "./components/BarChart/BarChart";
 import NavBar from "./components/NavBar/NavBar";
 import Image from "./components/Image/Image";
 import "./App.css";
-import { Divider, Grid, makeStyles, Typography } from "@material-ui/core";
+import { Grid, makeStyles, Typography } from "@material-ui/core";
 import MapGrid from "./components/MapGrid/MapGrid";
 
 const useStyles = makeStyles((theme) => ({

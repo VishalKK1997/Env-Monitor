@@ -40,9 +40,9 @@ const Image = () => {
   return (
     <div className={classes.root}>
       <Grid className={classes.inputForm} container spacing={1}>
-        <Grid item xs={3}>
+        <Grid item xs={4}>
           <Typography className={classes.heading} variant="h6">
-            Input the Date :
+            Input the Date:
           </Typography>
         </Grid>
         <Grid item xs={4}>

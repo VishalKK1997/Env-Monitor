@@ -30,8 +30,6 @@ const App = () => {
                 style={{
                   height: "100%",
                   width: "100%",
-                  marginTop: "5%",
-                  overflow: "hidden",
                 }}
               >
                 <Image />

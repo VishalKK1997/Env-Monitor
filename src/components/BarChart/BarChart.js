@@ -8,29 +8,46 @@ import {
 import React, { useState } from "react";
 import { Bar } from "react-chartjs-2";
 import formatDate from "../../utils/formatDate";
+import * as Zoom from "chartjs-plugin-zoom";
 
 const data = {
-  labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
+  labels: [
+    "Day 1",
+    "Day 2",
+    "Day 3",
+    "Day 4",
+    "Day 5",
+    "Day 6",
+    "Day 7",
+    "Day 8",
+    "Day 9",
+    "Day 10",
+    "Day 11",
+    "Day 12",
+    "Day 13",
+    "Day 14",
+  ],
   datasets: [
     {
       label: "Good Quality",
-      data: [3, 10, 13, 15, 22, 30, 23],
+      data: [3, 10, 13, 15, 22, 30, 23, 3, 10, 13, 15, 22, 30, 23],
       backgroundColor: "rgb(117, 184, 30)",
     },
     {
       label: "Moderate Quality",
-      data: [2, 3, 20, 5, 1, 4, 2],
+      data: [2, 3, 20, 5, 1, 4, 2, 3, 10, 13, 15, 22, 30, 23],
       backgroundColor: "rgb(247, 117, 2)",
     },
     {
       label: "Bad Quality",
-      data: [12, 19, 3, 5, 2, 3, 3],
+      data: [12, 19, 3, 5, 2, 3, 3, 3, 10, 13, 15, 22, 30, 23],
       backgroundColor: "rgb(213, 2, 3)",
     },
   ],
 };
 
 const options = {
+  responsive: true,
   title: {
     display: true,
     text: "Prediction Data",
@@ -44,6 +61,24 @@ const options = {
         },
       },
     ],
+  },
+  pan: {
+    enabled: true,
+    mode: "xy",
+    speed: 1,
+  },
+  zoom: {
+    enabled: true,
+    mode: "x",
+    speed: 1,
+    rangeMin: {
+      x: 2,
+      y: 0,
+    },
+    rangeMax: {
+      x: 50,
+      y: 100,
+    },
   },
 };
 

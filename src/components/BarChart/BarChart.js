@@ -8,7 +8,7 @@ import {
 import React, { useState } from "react";
 import { Bar } from "react-chartjs-2";
 import formatDate from "../../utils/formatDate";
-import * as Zoom from "chartjs-plugin-zoom";
+import "chartjs-plugin-zoom";
 
 const data = {
   labels: [
@@ -64,8 +64,9 @@ const options = {
   },
   pan: {
     enabled: true,
-    mode: "xy",
+    mode: "x",
     speed: 1,
+    threshold: 1,
   },
   zoom: {
     enabled: true,

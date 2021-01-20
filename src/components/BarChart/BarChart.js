@@ -8,7 +8,7 @@ import {
 import React, { useState } from "react";
 import { Bar } from "react-chartjs-2";
 import formatDate from "../../utils/formatDate";
-import "chartjs-plugin-zoom";
+import * as Zoom from "chartjs-plugin-zoom";
 
 const data = {
   labels: [
@@ -105,7 +105,10 @@ const BarChart = () => {
   const [barData] = useState(data);
   const classes = useStyles();
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    // console.log(Zoom, "Zoom");
+    Zoom.destroy();
+  };
 
   return (
     <div>

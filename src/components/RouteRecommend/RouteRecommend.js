@@ -1,14 +1,34 @@
+import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 import React from "react";
 import RouteImage from "../../assets/images/route_sample.png";
 
+const libraries = ["places"];
+const mapContainerStyle = {
+  width: "65vw",
+  height: "70vh",
+  borderRadius: "10px",
+};
+const center = {
+  lat: 23.522431430261793,
+  lng: 87.31047119682235,
+};
+
 const RouteRecommend = () => {
+  const { isLoaded, loadError } = useLoadScript({
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+    libraries,
+  });
+
+  if (loadError) return "Error loading Maps";
+  if (!isLoaded) return "Loading Google Maps...";
+
   return (
     <div>
-      <img
-        src={RouteImage}
-        alt="Route"
-        style={{ width: "80%", height: "80%" }}
-      />
+      <GoogleMap
+        mapContainerStyle={mapContainerStyle}
+        zoom={10}
+        center={center}
+      ></GoogleMap>
     </div>
   );
 };

@@ -115,13 +115,13 @@ const BarChart = () => {
       <Typography variant="h4" className={classes.heading}>
         Prediction Data For Previous Days
       </Typography>
-      <Grid container spacing={1}>
+      <Grid container spacing={2}>
         <Grid item xs={3}>
           <Typography className={classes.sub_heading} variant="h6">
             Input the Date :
           </Typography>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={4}>
           <TextField
             label="Start Date"
             type="date"
@@ -137,7 +137,7 @@ const BarChart = () => {
             onChange={(e) => setDays(e.target.value)}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={2}>
           <Button
             className={classes.button}
             variant="outlined"

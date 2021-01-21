@@ -1,6 +1,5 @@
 import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 import React from "react";
-import RouteImage from "../../assets/images/route_sample.png";
 
 const libraries = ["places"];
 const mapContainerStyle = {
